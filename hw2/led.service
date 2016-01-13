@@ -1,0 +1,14 @@
+
+[Unit]
+Description=led_toggle Service
+
+
+[Service]
+Type=oneshot
+StartLimitInterval=10s
+StartLimitBurst=30
+
+ExecStart=/usr/bin/toggle_led
+ExecStop=/etc/systemd/deactivate.service
+[Install]
+WantedBy=multi-user.target

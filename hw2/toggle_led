@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd /sys/class/gpio/gpio17
+Val=$(< value)
+zero=0
+echo $Val
+
+if [[ $Val == 0 ]]; then
+    echo '1' > value
+else
+    echo '0' > value
+fi
+

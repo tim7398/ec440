@@ -1,0 +1,12 @@
+[Unit]
+Description= "led toggle timer"
+Requires= activate.service
+After= activate.service
+Unit=led.service
+[Install]
+WantedBy= multi-user.target
+
+[Timer]
+OnActiveSec=1s
+OnUnitActiveSec=500ms
+AccuracySec=100ms

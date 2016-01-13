@@ -1,0 +1,6 @@
+[Unit]
+Description=activate led
+RemainAfterExit=true
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/activate_led

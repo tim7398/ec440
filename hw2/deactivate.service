@@ -1,0 +1,7 @@
+[Unit]
+Description=Deactivate service
+
+[Service]
+Type= oneshot
+
+ExecStart=/usr/bin/deactivate_led
